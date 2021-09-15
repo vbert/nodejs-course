@@ -1,2 +1,3 @@
-# nodejs-course
-Node.js course
+# Node.js course
+
+Course address: https://tworcastron.pl/kursy/node-kurs-kompletny
