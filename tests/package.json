@@ -1,0 +1,17 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node scripts Adam Kasia Tomek"
+  },
+  "author": "vbert",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "node-fetch": "^3.0.0"
+  }
+}
