@@ -6,7 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon webserver.js"
+    "watch": "nodemon webserver.js -e js,json",
+    "debug": "node --inspect index.js"
   },
   "repository": {
     "type": "git",
