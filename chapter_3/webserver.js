@@ -32,7 +32,7 @@ const app = express();
 
 const itemList = (user) => {
   const {id, name} = user;
-  return `<li><a href="/profile/${id}">${name } (id: ${id})</a></li>\n`
+  return `<li><a href="/profile/${id}">${name}</a></li>\n`
 };
 
 app.get('/', (req, res) => {
@@ -50,7 +50,7 @@ app.get('/profile', (req, res) => {
   });
   const content = `<h1>Profile</h1>
   <p>Znaleziono ${users.length} profile:</p>
-  <ul>\n${userList}</ul>
+  <ol>\n${userList}</ol>
   `;
   res.send(content);
 });

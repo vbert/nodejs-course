@@ -1,12 +1,10 @@
 {
-  "name": "chapter_3",
+  "name": "chapter_4",
   "version": "1.0.0",
-  "description": "Kurs node.js",
+  "description": "Chapter 4: Debugowanie",
   "main": "index.js",
-  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon webserver.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,9 +16,6 @@
     "url": "https://github.com/vbert/nodejs-course/issues"
   },
   "homepage": "https://github.com/vbert/nodejs-course#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
   "devDependencies": {
     "nodemon": "^2.0.12"
   }
