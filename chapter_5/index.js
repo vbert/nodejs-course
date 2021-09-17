@@ -39,6 +39,10 @@ app.get('/firmy/:name', (req, res) => {
   });
 });
 
+app.post('test', (req, res) => {
+  console.log(req);
+});
+
 app.get('*', (req, res) => {
   res.render('errors/404', {
     title: 'Nie znaleziono',
