@@ -10,12 +10,15 @@ app.set('views', path.join(__dirname + '/views'));
 // set layout
 app.use(ejsLayouts);
 app.set('layout', './layouts/main');
+// public folder
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   // res.send('Hello express');
   // res.sendFile(path.join(__dirname + '/views/home.html'));
   res.render('pages/home', {
-    title: 'Strona główna'
+    title: 'Strona główna',
+    url: req.url
   });
 });
 
@@ -35,18 +38,16 @@ app.get('/firmy/:name', (req, res) => {
   res.render('pages/company', {
     title: company?.name ?? 'Brak wyników',
     name: company?.name,
-    companies
+    companies,
+    url: req.url
   });
-});
-
-app.post('test', (req, res) => {
-  console.log(req);
 });
 
 app.get('*', (req, res) => {
   res.render('errors/404', {
     title: 'Nie znaleziono',
-    layout: 'layouts/minimalistic'
+    layout: 'layouts/minimalistic',
+    url: req.url
   });
 });
 
