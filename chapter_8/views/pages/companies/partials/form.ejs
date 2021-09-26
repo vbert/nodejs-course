@@ -1,0 +1,39 @@
+<% if(errors) { %>
+  <div class="alert alert-danger mt-3">
+    Popraw dane w formularzu
+  </div>
+<% } %>
+<form method="POST" class="needs-validation" novalidate>
+  <div class="mb-3">
+    <label for="companyName" class="form-label">Nazwa firmy</label>
+    <input type="text" id="companyName" 
+      name="name" 
+      value="<%= form.name %>"
+      class="form-control <%- errors?.name ? 'is-invalid' : '' %>" required>
+    <% if(errors?.name) { %>
+      <div class="invalid-feedback"><%= errors.name.message %></div>
+    <% } %>
+  </div>
+
+  <div class="mb-3">
+    <label for="companySlug" class="form-label">Slug</label>
+    <input type="text" id="companySlug" 
+      name="slug" 
+      value="<%= form.slug %>"
+      class="form-control <%- errors?.slug ? 'is-invalid' : '' %>" required>
+    <div class="form-text">Przynajmniej 3 znaki</div>
+    <% if(errors?.slug) { %>
+      <div class="invalid-feedback"><%= errors.slug.message %></div>
+    <% } %>
+  </div>
+
+  <div class="mb-3">
+    <label for="companyEmployeesCount" class="form-label">Liczba pracowników</label>
+    <input type="number" id="companyEmployeesCount" 
+      name="employeesCount" 
+      value="<%= form.employeesCount %>" 
+      class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-primary"><%- buttonText %></button>
+</form>
